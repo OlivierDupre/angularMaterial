@@ -1,0 +1,60 @@
+<div layout="vertical" layout-fill>
+
+  <md-content layout-fill>
+    <header ng-include="'app/components/navbar/navbar.html'"></header>
+
+    <section class="jumbotron">
+      <h1>Bonjour les gens</h1>
+      
+    </section>
+
+    <md-content layout-padding layout-align="center" layout="row">
+        <md-tabs md-dynamic-height md-border-bottom flex="50">
+            <md-tab label="one">
+                <md-content class="md-padding">
+                    <h1 class="md-display-2" ng-model="romain"></h1>
+                    
+                     <input type="text" id="testInput" ng-model="romain" md-sidenav-focus="">
+                    <p></p>
+                </md-content>
+            </md-tab>
+            <md-tab label="two">
+                <md-content class="md-padding">
+                    <h1 class="md-display-2">Tab 2</h1>
+                    <p>test de contenu 2</p>
+                </md-content>
+            </md-tab>
+            <md-tab label="three">
+                <md-content class="md-padding">
+                    <h1 class="md-display-2">Tab 3</h1>
+                    <p>test de contenu 3</p>
+                </md-content>
+            </md-tab>
+        </md-tabs>
+
+        <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right" md-is-locked-open="isLockedOpen"> 
+          <md-toolbar class="md-theme-light">
+            <h1 class="md-toolbar-tools">Sidenav Right</h1>
+          </md-toolbar>
+          <md-content ng-controller="RightCtrl" layout-padding="">
+            <form>
+              <md-input-container>
+                <label for="testInput">Test input</label>
+                <input type="text" id="testInput" ng-model="data" md-sidenav-focus="">
+              </md-input-container>
+            </form>
+            <md-button ng-click="close()" class="md-primary">
+              Close Sidenav Right
+            </md-button>
+          </md-content>
+        </md-sidenav>
+
+    </md-content>
+    <footer>
+      <md-toolbar layout="row" layout-align="center center">
+        <p>With ♥ from <a href="https://twitter.com/Swiip">@Swiip</a></p>
+      </md-toolbar>
+    </footer>
+  </md-content>
+
+</div>

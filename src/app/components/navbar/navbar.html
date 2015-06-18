@@ -1,0 +1,13 @@
+<md-toolbar layout="row" layout-align="center center" ng-controller="NavbarCtrl">
+
+  <h1 class="md-headline">Gulp Angular</h1>
+
+  <section flex layout="row" layout-align="left center">
+    <md-button href="#" class="md-raised">Home</md-button>
+    <md-button href="#" ng-click="toggleRight()" class="md-raised md-warn">About</md-button>
+    <md-button ng-click="showConfirm($event)" href="#" class="md-warn">Contact</md-button>
+  </section>
+
+  <md-button href="#">Current date: {{ date | date:'yyyy-MM-dd' }}</md-button>
+
+</md-toolbar>
